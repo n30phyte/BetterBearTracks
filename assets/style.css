@@ -38,7 +38,8 @@ form {
 table {
     width: 75ch;
     height: 70vh;
-    background-image: linear-gradient(orangered, orange);
+    /*background-image: linear-gradient(orangered, orange);*/
+    border-radius: 25px;
 }
 
 .pages {
@@ -51,17 +52,33 @@ tr,
 td {
     color: white;
     border-spacing: 20px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border-radius: 20px;
+    empty-cells: hide;
 }
 
-tr {
-    border: 1px solid powderblue;
-    margin: 20px;
+.day{
+    background-color: rgb(255, 116, 70);
+}
+
+.time{
+    background-color: rgb(255, 116, 70)
 }
 
 td {
+    margin: 5px;
     text-align: center;
-    margin: 20px;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, .1);
+
 }
+
+th {
+    background-color: orangered;
+
+}
+
 
 body {
     background-color: rgb(58, 58, 58);
@@ -104,7 +121,7 @@ a:hover {
     cursor: pointer;
     opacity: 0.6;
     transition: 0.3s;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .round {
