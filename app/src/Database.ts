@@ -31,5 +31,5 @@ export class DatabaseHelper {
     }
 }
 
-let db = new Database();
+let db = new DatabaseHelper();
 db.bootstrap();
