@@ -16,6 +16,7 @@ class Database {
             this.database.run(`CREATE TABLE Course(
                 `);  // TODO: Components (LEC/SEM/LAB whatever)
             this.database.run(`CREATE TABLE `);
+            this.database.run(``)
         });
     }
 }
