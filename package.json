@@ -2,9 +2,12 @@
   "name": "betterbeartracks",
   "version": "0.1.0",
   "description": "A better schedule builder for the U of A",
-  "main": "app.js",
+  "main": "main.js",
   "author": "armiantos, n30phyte, sqli",
   "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
   "devDependencies": {
     "@types/ldapjs": "^1.0.3",
     "@types/sqlite3": "^3.1.3",

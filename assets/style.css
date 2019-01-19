@@ -1,4 +1,4 @@
-head{
+head {
     font-family: verdana;
     color: pink;
 }
@@ -24,17 +24,29 @@ head{
     clear: both;
 }
 
-table{
-    ;
+table {
     width: 75ch;
+    height: 80vh;
 }
 
-th{
+
+th, tr, td {
     color: white;
+    border-spacing: 20px 20px;
+}
+
+tr {
+    border: 1px solid powderblue;
+    margin: 20px;
+}
+
+td {
+    text-align: center;
+    margin: 20px;
 }
 
 body {
-    background-color: rgb(58,58,58);
+    background-color: rgb(58, 58, 58);
     color: coral;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
@@ -45,13 +57,13 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h2{
+h2 {
     color: orange;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 p {
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    border: 1px solid powderblue;
     padding: 30px;
 }
