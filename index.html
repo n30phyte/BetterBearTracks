@@ -7,63 +7,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <di id="title">
+    <div id="title">
         <h1>
             schedule builder v1.0
         </h1>
-    </di>
+    </div>
 
-    <style>
-        body {
-            background-color: rgb(58, 58, 58);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-        }
-    </style>
+
 </head>
 
 <body>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Create two equal columns that floats next to each other */
-        .column {
-            background-color: rgb(96, 96, 96);
-            font-family: verdana;
-            float: left;
-            width: 50%;
-            padding: 10px;
-            height: 90vh;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-    </style>
     <div class="row">
         <div class="column" align="center">
-            <h1>
+            <h2>
                 <strong>
                     course search
                 </strong>
 
-            </h1>
+            </h2>
             <span>
                 term:
             </span>
             <p>
-                search here
+                <form action="/action_page.php">
+                    First name: <input type="text" name="fname"><br>
+                    Last name: <input type="text" name="lname"><br>
+                    <input type="submit" value="Submit">
+                </form>
             </p>
         </div>
         <div class="column" align="center">
-            <h1><strong>
+            <h2><strong>
                     timetable
-                </strong></h1>
+                </strong></h2>
+
+            <div class="timetable" align="center">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Monday (M)</th>
+                        <th>Tuesday (T)</th>
+                        <th>Wednesday (W)</th>
+                        <th>Thursday (R)</th>
+                        <th>Friday (F)</th>
+                    </tr>
+                    <tr>
+                        <td>8 AM</td>
+                    </tr>
+                    <tr>
+                        <td>9 AM</td>
+                    </tr>
+                    <tr>
+                        <td>10 AM</td>
+                    </tr>
+                    <tr>
+                        <td>11 AM</td>
+                    </tr>
+                    <tr>
+                        <td>12 PM</td>
+                        <td> buns </td>
+                    </tr>
+                    <tr>
+                        <td>1 PM</td>
+                    </tr>
+                    <tr>
+                        <td>2 PM</td>
+                    </tr>
+                    <tr>
+                        <td>3 PM</td>
+                    </tr>
+                    <tr>
+                        <td>4 PM</td>
+                    </tr>
+                </table>
+            </div>
+
+
         </div>
     </div>
 </body>
