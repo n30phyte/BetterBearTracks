@@ -24,20 +24,34 @@ head{
     clear: both;
 }
 
+#title {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100ch;
+    height: 194px;
+    display:block;
+    position:relative;
+    color: red;
+    
+    p{
+        
+    }
+}
+
 body {
     background-color: darkgrey;
-    font-family: verdana;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 100%;
 }
 
 h1 {
-    color: paleturquoise;
-    font-family: verdana;
+    color: rgb(250, 92, 0);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 p {
     color: orangered;
-    font-family: verdana;
+    font-family: 'Times New Roman', Times, serif;
     border: 1px solid powderblue;
     padding: 30px;
 }
