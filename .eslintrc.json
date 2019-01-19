@@ -1,9 +1,7 @@
 {
     "root": true,
     "env": {
-        "es6": true,
-        "node": true,
-        "jsx": true
+        "node": true
     },
     "extends": "eslint:recommended",
     "rules": {
@@ -11,7 +9,7 @@
         "indent": ["warn", 4],
         "for-direction": ["error"],
         "quote-props": ["warn", "consistent-as-needed"],
-        "curly": ["warn", true],
+        "curly": ["warn", "all"],
         "eqeqeq": ["error", "smart"],
         "eol-last": ["off"],
         "no-console": "off",

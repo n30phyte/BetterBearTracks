@@ -5,7 +5,7 @@
   "main": "main.js",
   "author": "armiantos, n30phyte, sqli",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "start": "electron ."
   },
   "devDependencies": {
