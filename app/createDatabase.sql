@@ -1,23 +1,23 @@
 CREATE TABLE Term(
     termID int,
-    termTitle varchar[79],
-    endDate text,
+    termTitle text,
     startDate text
+    endDate text,
 )
 
 CREATE TABLE Course(
-    courseSubject varchar[10],
+    courseSubject text,
     courseCatalog int,
-    courseTitle varchar[80],
-    asString varchar[80],
+    courseTitle text,
+    asString text,
     course int,
     term int,
-    courseDescription varchar[300],
-    career varchar[80],
-    department varchar[80],
-    faculty varchar[80],
-    facultyCode varchar[10],
-    subjectTitle varchar[80],
+    courseDescription text,
+    career text,
+    department text,
+    faculty text,
+    facultyCode text,
+    subjectTitle text,
     units float
 )
 
