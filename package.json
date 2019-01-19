@@ -1,0 +1,15 @@
+{
+  "name": "betterbeartracks",
+  "version": "0.1.0",
+  "description": "A better schedule builder for the U of A",
+  "main": "app.js",
+  "author": "armiantos, n30phyte, sqli",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "purecss": "^1.0.0"
+  }
+}
