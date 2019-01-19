@@ -1,0 +1,57 @@
+head{
+    font-family: verdana;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    background-color: lightblue;
+    font-family: verdana;
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#title {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100ch;
+    height: 194px;
+    display:block;
+    position:relative;
+    color: red;
+    
+    p{
+        
+    }
+}
+
+body {
+    background-color: darkgrey;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+
+h1 {
+    color: rgb(250, 92, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    color: orangered;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid powderblue;
+    padding: 30px;
+}
