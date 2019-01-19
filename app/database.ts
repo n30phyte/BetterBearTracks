@@ -5,14 +5,31 @@ class Database {
     private database: sqlite.Database;
 
     constructor() {
-        this.database = new sqlite.Database("beartracks");
+        this.database = new sqlite.Database("./beartracks.db");
     }
-    private boostrap() {
+
+    public bootstrap(): void {
         this.database.serialize(function () {
-            const createDatabase = fs.readFileSync("./createDatabase.sql").toString();
-            const processBearTracks = fs.readFileSync("./processBeartracks.sql").toString();
-            this.database.run(createDatabase); // TODO: Courses
+            let createDatabase = fs.readFileSync("./createDatabase.sql").toString();
+            let processBearTracks = fs.readFileSync("./processBeartracks.sql").toString();
+
+            this.database.run(createDatabase);
             this.database.run(processBearTracks);
         });
     }
+
+    public printDatabase(tableName: string): void {
+        let sql = "SELECT * FROM " + tableName;
+        this.database.all(sql, [], (err, rows) => {
+            if (err) {
+                throw err;
+            }
+            rows.forEach((row) => {
+                console.log(row.name);
+            });
+        });
+    }
 }
+
+let db = new Database();
+db.bootstrap();
