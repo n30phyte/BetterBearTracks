@@ -1,7 +1,7 @@
 class CourseClass extends BaseModel {
     public component: string; // LEC
     public section: string; // B1
-    public location: string; 
+    public location: string;
     public day: string; // MWF, TR
     public startTime: string;
     public endTime: string;

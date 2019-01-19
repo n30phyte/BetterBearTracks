@@ -6,7 +6,8 @@
   "author": "armiantos, n30phyte, sqli",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "watch": "tsc -w"
   },
   "devDependencies": {
     "@types/ldapjs": "^1.0.3",

@@ -2,6 +2,15 @@
     "compileOnSave": true,
     "compilerOptions": {
         "target": "es3",
-        "module":"commonjs"
-    }
+        "module": "system",
+        "outFile": "./app/app.js",
+        "sourceRoot": "./src/",
+        "inlineSourceMap": true
+
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+
 }

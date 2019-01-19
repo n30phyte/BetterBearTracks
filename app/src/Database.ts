@@ -1,6 +1,6 @@
 import * as sqlite from "sqlite3";
 
-class Database {
+export class DatabaseHelper {
     private database: sqlite.Database;
 
     constructor() {
@@ -19,3 +19,4 @@ class Database {
         });
     }
 }
+
