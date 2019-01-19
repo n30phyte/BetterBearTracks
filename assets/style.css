@@ -24,13 +24,31 @@ head {
     clear: both;
 }
 
-table {
-    width: 75ch;
-    height: 80vh;
+form {
+    text-align: center;
+    line-height: 30px;
+    height: 80%;
+    overflow: auto;
 }
 
+.search label {
+    margin-right: 25px;
+}
 
-th, tr, td {
+table {
+    width: 75ch;
+    height: 70vh;
+    background-image: linear-gradient(orangered, orange);
+}
+
+.pages {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+th,
+tr,
+td {
     color: white;
     border-spacing: 20px 20px;
 }
@@ -66,4 +84,29 @@ p {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+.changePage {
+    background-color: rgb(58, 58, 58);
+    margin-top: 2%;
+    color: white;
+    font-size: 200%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    border-radius: 50%; 
+}
+
+.round {
+    border-radius: 50%;
 }
