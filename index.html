@@ -3,95 +3,130 @@
 
 <head>
 
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <div id="title">
-        <h1>
-            schedule builder v1.0
-        </h1>
-    </div>
-
-
+    <title>Schedule Builder V2</title>
 </head>
 
 <body>
-    <div class="row">
-        <div class="column" align="center">
-            <h2>
-                course select
-            </h2>
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
 
-            <p>
-                <form action="/example.html" method="POST">
-                    <label for="search">course search: </label>
-                    <br>
-                    <input type="text" name="course search" id="search">
-                </form>
-            </p>
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#">Course Search</a>
+
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">ECE 202</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">ECE 210</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="column" align="center">
-            <h2><strong>
-                    timetable
-                </strong></h2>
 
-            <div class="timetable" align="center">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th class="day">Monday (M)</th>
-                        <th class="day">Tuesday (T)</th>
-                        <th class="day">Wednesday (W)</th>
-                        <th class="day">Thursday (R)</th>
-                        <th class="day">Friday (F)</th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td class="time">8 AM</td>
-                    </tr>
-                    <tr>
-                        <td class="time">9 AM</td>
-                        <td></td>
-                        <td></td>
-                        <td rowspan="2">mac n cheese <br> 9-11am</td>
-                    </tr>
-                    <tr>
-                        <td class="time">10 AM</td>
-                    </tr>
-                    <tr>
-                        <td class="time">11 AM</td>
-                    </tr>
-                    <tr>
-                        <td class="time">12 PM</td>
-                        <td rowspan="4"> buns <br>12-4pm </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="time">1 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="time">2 PM</t>
-                    </tr>
-                    <tr>
-                        <td class="time">3 PM</td>
-                    </tr>
-                    <tr>
-                        <td class="time">4 PM</td>
-                    </tr>
-                </table>
+        <div id="main">
+            <div class="header">
+                <h2>Timetable</h2>
             </div>
-
-            <div class="pages">
-
-                <a href="#back end" class="changePage">|<</a> <a href="#back a page" class="changePage">&#8249;</a>
-                page
-                <a href="#forward a page" class="changePage">&#8250;</a>
-                <a href="#forward end" class="changePage">>|</a>
+            <div class="content timetable">
+                <div class="pure-g">
+                    <div class="pure-u-1-6">
+                        Time
+                    </div>
+                    <div class="pure-u-1-6">
+                        Monday (M)
+                    </div>
+                    <div class="pure-u-1-6">
+                        Tuesday (T)
+                    </div>
+                    <div class="pure-u-1-6">
+                        Wednesday (W)
+                    </div>
+                    <div class="pure-u-1-6">
+                        Thursday (R)
+                    </div>
+                    <div class="pure-u-1-6">
+                        Friday (F)
+                    </div>
+                </div>
             </div>
+            <div class="pure-menu pure-menu-horizontal">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Start</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Left</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Right</a></li>
+                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">End</a></li>
+                </ul>
 
+            </div>
         </div>
     </div>
+
+
+    <!-- 
+        <div class="search_output">
+                    <form action="/example.html" method="GET">
+                        <label for="search">course search: </label>
+                        <br>
+                        <input type="text" name="course search" id="search">
+                    </form>
+                </div>
+        <div class="column_header">
+            timetable
+        </div>
+        <div class="pure-table">
+            <table>
+                <tr>
+                    <td class="time">8 AM</td>
+                </tr>
+                <tr>
+                    <td class="time">9 AM</td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="2">mac n cheese <br> 9-11am</td>
+                </tr>
+                <tr>
+                    <td class="time">10 AM</td>
+                </tr>
+                <tr>
+                    <td class="time">11 AM</td>
+                </tr>
+                <tr>
+                    <td class="time">12 PM</td>
+                    <td rowspan="4"> buns <br>12-4pm </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="time">1 PM</td>
+                </tr>
+                <tr>
+                    <td class="time">2 PM</t>
+                </tr>
+                <tr>
+                    <td class="time">3 PM</td>
+                </tr>
+                <tr>
+                    <td class="time">4 PM</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pages">
+
+            <a href="#back end" class="changePage">|<</a> <a href="#back a page" class="changePage">&#8249;</a>
+            page
+            <a href="#forward a page" class="changePage">&#8250;</a>
+            <a href="#forward end" class="changePage">>|</a>
+        </div>
+
+    </div>
+
+    </div> -->
 </body>
 
 </html>
