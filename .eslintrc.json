@@ -1,0 +1,24 @@
+{
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true,
+        "jsx": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "quotes": ["warn", "double"],
+        "indent": ["warn", 4],
+        "for-direction": ["error"],
+        "quote-props": ["warn", "consistent-as-needed"],
+        "curly": ["warn", true],
+        "eqeqeq": ["error", "smart"],
+        "eol-last": ["off"],
+        "no-console": "off",
+        "no-cond-assign": "warn",
+        "no-unused-vars": "warn",
+        "no-extra-semi": "warn",
+        "semi": "error"
+
+    }
+}
