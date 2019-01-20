@@ -30,7 +30,6 @@ form {
 
 #courseSearch {
     border-radius: 15px;
-    padding-right: 20px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -67,6 +66,10 @@ form {
     height: 100%;
 }
 
+.col{
+    padding: 1.5%;
+}
+
 .time{
     background-color: rgba(255,255,255,.02);
     border-radius: 15px;
@@ -97,17 +100,11 @@ p {
     padding: auto;
 }
 
-.page-nav{
-    margin:center;
-    padding:center;
-}
-
 a {
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
-    align: center;
-
+    margin: 5px;
   }
   
   a:hover {
