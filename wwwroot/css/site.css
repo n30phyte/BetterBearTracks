@@ -1,56 +1,177 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿* {
+  box-sizing: border-box;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.course1 {
+  background-color: rgba(112,214,255,.5);
+  color: white;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.course2 {
+  background-color: rgba(255,112,166,.5);
+  color: white;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.course3 {
+  background-color: rgba(255,151,112,.5);
+  color: white;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.course4 {
+  background-color: rgba(255,214,112,.5);
+  color: white;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+.course5 {
+  background-color: rgba(233,255,112,.5);
+  color: white;
+}
+
+.course6 {
+  background-color: rgba(188, 158, 193, .5);
+  color: white;
+}
+
+.course7{
+  background-color: rgba(164,169, 173,5);
+  color: white; 
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  color: #777;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
+
+.timetable_header {
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: orangered;
+}
+
+head {
+  font-family: verdana;
+  color: pink;
+}
+
+form {
+  text-align: center;
+  line-height: 30px;
+  height: 80%;
+  overflow: auto;
+}
+
+.container-fluid {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+#courseSearch {
+  border-radius: 15px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* centers placeholder text */
+::-webkit-input-placeholder {
+  color: #808080;
+  text-align: center;
+
+}
+
+.form-group {
+  padding-top: 20px;
+}
+
+.list-group {
+  padding-bottom: 10px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 15px;
+  width: auto;
+  background-color: rgba(100, 100, 100, .9);
+}
+
+.table_header {
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 15px;
+  margin: 2px;
+  text-align: center
+}
+
+#timetable {
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 10%;
+}
+
+.col {
+  padding: 1.5vh;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.course {
+  background-color: rgba(200, 200, 200, .02);
+}
+
+.stackem {
   width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+}
+
+.time {
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 15px;
+  margin: 2px;
+  text-align: center
+}
+
+body {
+  background-color: rgb(58, 58, 58);
+  color: coral;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  color: #E55934;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  color: #D9594C;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color: orange;
+  font-family: 'Courier New', Courier, monospace;
+  padding: auto;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+}
+
+a:hover {
+  background-color: rgba(58, 58, 58, .4);
+  color: black;
+}
+
+.previous,
+.next {
+  background-color: white;
+  color: rgb(100, 100, 100);
+  border-radius: 50%;
+}
+
+.pagenum {
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
