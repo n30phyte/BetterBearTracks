@@ -64,10 +64,12 @@ form {
 
 .timetable{
     height: 100%;
+    padding-top: 5px;
+    padding-bottom: 10%;
 }
 
 .col{
-    padding: 1.5%;
+    padding: 1.5vh;
 }
 
 .time{
@@ -118,3 +120,10 @@ a {
     border-radius: 50%;
   }
   
+  .pagenum{
+      font-size: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
