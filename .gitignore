@@ -170,3 +170,5 @@ modules.xml
 *.ipr
 
 # End of https://www.gitignore.io/api/intellij+all
+
+main.js
