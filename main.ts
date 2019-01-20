@@ -1,5 +1,4 @@
-import { app, BrowserWindow } from "electron";
-import * as path from "path";
+import { app, BrowserWindow, ipcRenderer } from "electron";
 
 let mainWindow: Electron.BrowserWindow;
 
@@ -12,10 +11,12 @@ function createWindow() {
 
     // and load the index.html of the app.
     mainWindow.loadFile("./index.html");
+    mainWindow.webContents.openDevTools();
 
     mainWindow.on("closed", () => {
         mainWindow = null;
     });
+
 }
 
 // This method will be called when Electron has finished

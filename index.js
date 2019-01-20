@@ -1,10 +1,13 @@
-function startup() {
-    console.log("Window Loaded");
-    document.getElementById("course-item").addEventListener("click", addCourse);
-}
+$(() => {
+    const electron = require('electron')
+    console.log("loaded")
+    $('#courseSearch')
+        .keyup(function() {
+            console.log();
+            updateList(query);
+        })
+});
 
-function addCourse() {
-    console.log("Course added");
-}
+function updateList(query) {
 
-window.onload = startup;
+}

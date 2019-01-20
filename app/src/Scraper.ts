@@ -1,5 +1,5 @@
-import { DatabaseHelper } from "Database";
 import ldap from "ldapjs";
+import { DatabaseHelper } from "./Database";
 
 export class Scraper {
     private db: DatabaseHelper;
@@ -7,7 +7,6 @@ export class Scraper {
 
     constructor() {
         this.ldapClient = ldap.createClient({ url: "directory.srv.ualberta.ca" });
-
     }
 
     public Start() {
@@ -15,6 +14,27 @@ export class Scraper {
     }
 
     public ScrapeTerms() {
-    }
+        let opts = {
+            filter: "(&(term=1600)(facultyCode=EN)(objectClass=uOfACourse))",
+            scope: "sub"
+        };
 
+        this.ldapClient.search("ou=calendar,dc=ualberta,dc=ca", opts, (err, res) => {
+            res.on("searchEntry", (entry) => {
+                console.log("Entry", JSON.stringify(entry.object));
+            });
+            res.on("searchReference", (referral) => {
+                console.log("Referral", referral);
+            });
+            res.on("error", (err) => {
+                console.log("Error is", err);
+            });
+            res.on("end", (result) => {
+                console.log("Result is", result);
+            });
+        });
+    }
 }
+
+let object = new Scraper();
+object.ScrapeTerms();
