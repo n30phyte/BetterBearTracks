@@ -5,7 +5,8 @@
         "module": "system",
         "outFile": "./app/app.js",
         "sourceRoot": "./src/",
-        "inlineSourceMap": true
+        "inlineSourceMap": true,
+        "moduleResolution": "node"
 
     },
     "exclude": [

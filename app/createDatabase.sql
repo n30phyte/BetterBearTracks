@@ -1,11 +1,11 @@
-CREATE TABLE IF NOT EXISTS Term (
+CREATE TABLE Term(
     termID int,
     termTitle text,
-    startDate text,
-    endDate text
-);
+    startDate text
+    endDate text,
+)
 
-CREATE TABLE IF NOT EXISTS Course(
+CREATE TABLE Course(
     courseSubject text,
     courseCatalog int,
     courseTitle text,
@@ -19,9 +19,9 @@ CREATE TABLE IF NOT EXISTS Course(
     facultyCode text,
     subjectTitle text,
     units float
-);
+)
 
-CREATE TABLE IF NOT EXISTS CourseClass(
+CREATE TABLE CourseClass(
     component text,
     section text,
     classLocation text,
@@ -49,5 +49,5 @@ CREATE TABLE IF NOT EXISTS CourseClass(
     instructionMode text,
     instructorID text,
     courseSession text,
-    units float
-);
+    units float   
+)

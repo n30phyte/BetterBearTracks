@@ -3,154 +3,72 @@
 
 <head>
 
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
+    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule Builder V2</title>
 </head>
 
 <body>
-    <div id="layout">
-        <!-- Menu toggle -->
-        <a href="#menu" id="menuLink" class="menu-link">
-            <!-- Hamburger icon -->
-            <span></span>
-        </a>
-
-        <div id="menu">
-            <div class="pure-menu">
-                <a class="pure-menu-heading" href="#">Course Search</a>
-
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">ECE 202</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">ECE 210</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="main">
-
-            <div class="header">
-                <h2>Timetable</h2>
-            </div>
-
-            <div class="content timetable">
-                <div class="pure-g">
-                    <div class="pure-u-1-6 table_header" align="center">
-                        Time
-                    </div>
-                    <div class="pure-u-1-6 table_header" align="center">
-                        Mon (M)
-                    </div>
-                    <div class="pure-u-1-6 table_header" align="center">
-                        Tues (T)
-                    </div>
-                    <div class="pure-u-1-6 table_header" align="center">
-                        Wed (W)
-                    </div>
-                    <div class="pure-u-1-6 table_header" align="center">
-                        Thur (R)
-                    </div>
-                    <div class="pure-u-1-6 table_header" align="center" >
-                        Fri (F)
-                    </div>
-                </div>
-
-                <div class="pure-g">
-                        <div class="pure-u-1-6">
-                            A
-                        </div>
-                        <div class="pure-u-1-6">
-                            B
-                        </div>
-                        <div class="pure-u-1-6">
-                            C
-                        </div>
-                        <div class="pure-u-1-6">
-                            D
-                        </div>
-                        <div class="pure-u-1-6">
-                            E
-                        </div>
-                        <div class="pure-u-1-6">
-                            F
-                        </div>
-                    </div>
-            </div>
-            
-            <div class="pure-menu pure-menu-horizontal" align="center">
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">|< Start</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">< Left</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Right ></a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">End >|</a></li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-
-
-    <!-- 
-        <div class="search_output">
-                    <form action="/example.html" method="GET">
-                        <label for="search">course search: </label>
-                        <br>
-                        <input type="text" name="course search" id="search">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2" id="menu">
+                <div class="form-group">
+                    <form>
+                        <label for="courseSearch">Course code here:</label>
+                        <input id="courseSearch" type="text" placeholder="Course Search">
                     </form>
                 </div>
-        <div class="column_header">
-            timetable
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">ECE 202 </a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+                </div>
+                <div class="card bottom">
+                    <div class="card-body">
+                        <h5 class="card-title">ECE 210</h5>
+                        <p class="card-text">COURSE DESCRIPTION.</p>
+                        <a href="#" class="btn btn-primary">ADD TO BUILDER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="main">
+                    <div class="header">
+                        <h2>Timetable</h2>
+                    </div>
+                    <div class="timetable">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    Time
+                                </div>
+                                <div class="col">
+                                    Monday (M)
+                                </div>
+                                <div class="col">
+                                    Tuesday (T)
+                                </div>
+                                <div class="col">
+                                    Wednesday (W)
+                                </div>
+                                <div class="col">
+                                    Thursday (R)
+                                </div>
+                                <div class="col">
+                                    Friday (F)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="pure-table">
-            <table>
-                <tr>
-                    <td class="time">8 AM</td>
-                </tr>
-                <tr>
-                    <td class="time">9 AM</td>
-                    <td></td>
-                    <td></td>
-                    <td rowspan="2">mac n cheese <br> 9-11am</td>
-                </tr>
-                <tr>
-                    <td class="time">10 AM</td>
-                </tr>
-                <tr>
-                    <td class="time">11 AM</td>
-                </tr>
-                <tr>
-                    <td class="time">12 PM</td>
-                    <td rowspan="4"> buns <br>12-4pm </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="time">1 PM</td>
-                </tr>
-                <tr>
-                    <td class="time">2 PM</t>
-                </tr>
-                <tr>
-                    <td class="time">3 PM</td>
-                </tr>
-                <tr>
-                    <td class="time">4 PM</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="pages">
-
-            <a href="#back end" class="changePage">|<</a> <a href="#back a page" class="changePage">&#8249;</a>
-            page
-            <a href="#forward a page" class="changePage">&#8250;</a>
-            <a href="#forward end" class="changePage">>|</a>
-        </div>
-
     </div>
-
-    </div> -->
 </body>
 
 </html>
