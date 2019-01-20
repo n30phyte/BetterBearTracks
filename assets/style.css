@@ -47,7 +47,17 @@ form {
     padding-bottom: 10px;
 }
 
-.col
+.bottom {
+    position: fixed;
+    bottom: 15px;
+    width: auto;
+} 
+
+.table_header{
+    background-color: rgba(255,255,255,.09);
+    border-radius: 15px;
+    margin: 2px;
+}
 
 body {
     background-color: rgb(58, 58, 58);
