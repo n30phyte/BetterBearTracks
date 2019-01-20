@@ -5,7 +5,10 @@
     ],
     "jsRules": {},
     "rules": {
-        "no-inferrable-types": true
+        "no-inferrable-types": true,
+        "no-default-export": false,
+        "no-console": false
+
     },
     "rulesDirectory": []
 }

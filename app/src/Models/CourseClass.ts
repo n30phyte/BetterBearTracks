@@ -1,3 +1,5 @@
+import { BaseModel } from "./BaseModel";
+
 class CourseClass extends BaseModel {
     public component: string; // LEC
     public section: string; // B1
