@@ -9,8 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ElectronNET.API;
 
-namespace BetterBearTracks
+namespace BetterBearTracksv2
 {
     public class Startup
     {
@@ -59,6 +60,8 @@ namespace BetterBearTracks
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+
         }
     }
 }
