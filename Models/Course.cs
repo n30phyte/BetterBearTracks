@@ -1,7 +1,8 @@
 using System;
 
-namespace BetterBearTracks.Models {
-    public class Course {
+namespace BetterBearTracks.Models
+{
+	public class Course {
 		public string subject { get; set; }
 		public int catalog { get; set; }
 		public string title { get; set; }

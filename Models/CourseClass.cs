@@ -1,9 +1,9 @@
 ﻿using System;
 
-
 namespace BetterBearTracks.Models
 {
-	public class CourseClass {
+	public class CourseClass
+	{
 		public string component { get; set; }
 		public string section { get; set; }
 		public string location { get; set; }
