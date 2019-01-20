@@ -53,6 +53,7 @@ form {
     position: fixed;
     bottom: 15px;
     width: auto;
+    background-color: rgba(100,100,100,.9);
 } 
 
 .table_header{
@@ -131,7 +132,7 @@ a {
   }
   
   .pagenum{
-      font-size: 15px;
+      font-size: 12px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       padding-top: 5px;
       padding-left: 10px;
