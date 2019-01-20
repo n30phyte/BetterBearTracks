@@ -23,9 +23,9 @@ form {
     height: 80%;
     overflow: auto;
 }
-
 .container-fluid{
     padding-top: 20px;
+    padding-bottom: 0px;
 }
 
 #courseSearch {
@@ -64,7 +64,7 @@ form {
 }
 
 .timetable{
-    height: 80vh;
+    height: 100%;
 }
 
 .time{
@@ -96,3 +96,28 @@ p {
     font-family: 'Courier New', Courier, monospace;
     padding: auto;
 }
+
+.page-nav{
+    margin:center;
+    padding:center;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    align: center;
+
+  }
+  
+  a:hover {
+    background-color: rgba(58, 58, 58, .4);
+    color: black;
+  }
+  
+  .previous, .next {
+    background-color: white;
+    color: rgb(100,100,100);
+    border-radius: 50%;
+  }
+  
