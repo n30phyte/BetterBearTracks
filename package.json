@@ -2,7 +2,7 @@
   "name": "betterbeartracks",
   "version": "0.1.0",
   "description": "A better schedule builder for the U of A",
-  "main": "main.js",
+  "main": "./build/main.js",
   "author": "armiantos, n30phyte, sqli",
   "license": "MIT",
   "scripts": {
@@ -10,6 +10,7 @@
     "watch": "tsc -w"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.29",
     "@types/ldapjs": "^1.0.3",
     "@types/sqlite3": "^3.1.3",
     "electron": "^4.0.1",
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
     "purecss": "^1.0.0",
     "sqlite3": "^4.0.6"
   }
