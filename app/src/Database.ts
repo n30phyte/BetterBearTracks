@@ -14,11 +14,13 @@ export class DatabaseHelper {
     }
 
     public insert(sql: string): void {
-        this.database.run(sql);
+        this.database.run(sql, (err)=> {
+            throw err;
+        });
     }
 
     public printDatabase(tableName: string): void {
-        let sql = "SELECT * FROM " + tableName;
+        let sql = "SELECT * FROM " + tableName + " ORDER BY termID";
         this.database.all(sql, [], (err, rows) => {
             if (err) {
                 throw err;
