@@ -13,17 +13,19 @@ export class DatabaseHelper {
         this.database.run(sql);
     }
 
-    public insert(sql: string): void {
+    public insert(sql: string, target: string): void {
         this.database.run(sql, (err)=> {
-            throw err;
+            // console.log("tried to fetch " + target);
+            // throw err;
         });
     }
 
     public printDatabase(tableName: string): void {
-        let sql = "SELECT * FROM " + tableName + " ORDER BY termID";
+        let sql = "SELECT * FROM " + tableName;
         this.database.all(sql, [], (err, rows) => {
             if (err) {
-                throw err;
+                // console.log("tried to fetch " + tableName);
+                // throw err;
             }
             rows.forEach((row) => {
                 console.log(row);

@@ -24,13 +24,21 @@ export class Scraper {
         };
         this.ldapClient.search("term=" + termID + ", ou=calendar, dc=ualberta, dc=ca", opts, (err, res) => {
             res.on("searchEntry", (entry) => {
-                let sql: string = "INSERT INTO Course (courseSubject, courseCatalog, courseTitle) VALUES ('" +
-                entry.object.subject + "', " + entry.object.catalog + ", '" + entry.object.courseTitle + "')";
+                let sql: string = "INSERT INTO Course (asString, courseSubject, courseCatalog, courseTitle) VALUES ('" +
+                entry.object.asString + "', '" +entry.object.subject + "', " + entry.object.catalog + ", '" +
+                entry.object.courseTitle + "')";
                 console.log(sql);
-                this.db.insert(sql);
+                this.db.insert(sql, "courses");
+            });
+            res.on("searchReference", (referral) => {
+                // console.log("Referral", referral);
             });
             res.on("error", (err) => {
-                throw err;
+                // throw err;
+                // console.log("Error is", err);
+            });
+            res.on("end", (result) => {
+                // console.log("Result is", result);
             });
         });
     }
@@ -45,13 +53,14 @@ export class Scraper {
             res.on("searchEntry", (entry) => {
                 let sql: string = "INSERT INTO Term VALUES (" + entry.object.term + ", '" +
                 entry.object.termTitle + "', '" + entry.object.startDate + "', '" + entry.object.endDate + "')";
-                this.db.insert(sql);
+                this.db.insert(sql, "term");
                 // console.log(JSON.stringify(entry.object));
             });
             res.on("searchReference", (referral) => {
                 // console.log("Referral", referral);
             });
             res.on("error", (err) => {
+                // throw err;
                 // console.log("Error is", err);
             });
             res.on("end", (result) => {

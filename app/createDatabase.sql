@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS Term(
 CREATE TABLE IF NOT EXISTS Course(
     courseSubject text,
     courseCatalog int,
-    courseTitle text UNIQUE,
-    asString text,
+    courseTitle text,
+    asString text UNIQUE,
     course int,
     term int,
     courseDescription text,

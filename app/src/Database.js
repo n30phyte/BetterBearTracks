@@ -10,16 +10,18 @@ var DatabaseHelper = /** @class */ (function () {
         var sql = fs.readFileSync("../createDatabase.sql").toString();
         this.database.run(sql);
     };
-    DatabaseHelper.prototype.insert = function (sql) {
+    DatabaseHelper.prototype.insert = function (sql, target) {
         this.database.run(sql, function (err) {
-            throw err;
+            // console.log("tried to fetch " + target);
+            // throw err;
         });
     };
     DatabaseHelper.prototype.printDatabase = function (tableName) {
-        var sql = "SELECT * FROM " + tableName + " ORDER BY termID";
+        var sql = "SELECT * FROM " + tableName;
         this.database.all(sql, [], function (err, rows) {
             if (err) {
-                throw err;
+                // console.log("tried to fetch " + tableName);
+                // throw err;
             }
             rows.forEach(function (row) {
                 console.log(row);

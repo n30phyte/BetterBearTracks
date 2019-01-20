@@ -21,13 +21,21 @@ var Scraper = /** @class */ (function () {
         };
         this.ldapClient.search("term=" + termID + ", ou=calendar, dc=ualberta, dc=ca", opts, function (err, res) {
             res.on("searchEntry", function (entry) {
-                var sql = "INSERT INTO Course (courseSubject, courseCatalog, courseTitle) VALUES ('" +
-                    entry.object.subject + "', " + entry.object.catalog + ", '" + entry.object.courseTitle + "')";
+                var sql = "INSERT INTO Course (asString, courseSubject, courseCatalog, courseTitle) VALUES ('" +
+                    entry.object.asString + "', '" + entry.object.subject + "', " + entry.object.catalog + ", '" +
+                    entry.object.courseTitle + "')";
                 console.log(sql);
-                _this.db.insert(sql);
+                _this.db.insert(sql, "courses");
+            });
+            res.on("searchReference", function (referral) {
+                // console.log("Referral", referral);
             });
             res.on("error", function (err) {
-                throw err;
+                // throw err;
+                // console.log("Error is", err);
+            });
+            res.on("end", function (result) {
+                // console.log("Result is", result);
             });
         });
     };
@@ -42,13 +50,14 @@ var Scraper = /** @class */ (function () {
             res.on("searchEntry", function (entry) {
                 var sql = "INSERT INTO Term VALUES (" + entry.object.term + ", '" +
                     entry.object.termTitle + "', '" + entry.object.startDate + "', '" + entry.object.endDate + "')";
-                _this.db.insert(sql);
+                _this.db.insert(sql, "term");
                 // console.log(JSON.stringify(entry.object));
             });
             res.on("searchReference", function (referral) {
                 // console.log("Referral", referral);
             });
             res.on("error", function (err) {
+                // throw err;
                 // console.log("Error is", err);
             });
             res.on("end", function (result) {
