@@ -28,7 +28,3 @@ export class DatabaseHelper {
         });
     }
 }
-
-let db = new DatabaseHelper();
-db.bootstrap();
-db.printDatabase("Term");
