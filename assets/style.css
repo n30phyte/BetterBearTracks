@@ -23,13 +23,15 @@ form {
     height: 80%;
     overflow: auto;
 }
-
+.container-fluid{
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
 
 #courseSearch {
     border-radius: 15px;
-    padding-right: 20px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* centers placeholder text */
@@ -40,11 +42,39 @@ form {
 }
 
 .form-group {
-    padding: auto;
+    padding-top: 20px;
 }
 
 .list-group {
     padding-bottom: 10px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 15px;
+    width: auto;
+} 
+
+.table_header{
+    background-color: rgba(255,255,255,.09);
+    border-radius: 15px;
+    margin: 2px;
+    text-align:center
+}
+
+.timetable{
+    height: 100%;
+}
+
+.col{
+    padding: 1.5%;
+}
+
+.time{
+    background-color: rgba(255,255,255,.02);
+    border-radius: 15px;
+    margin: 2px;
+    text-align:center
 }
 
 body {
@@ -69,3 +99,22 @@ p {
     font-family: 'Courier New', Courier, monospace;
     padding: auto;
 }
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+  }
+  
+  a:hover {
+    background-color: rgba(58, 58, 58, .4);
+    color: black;
+  }
+  
+  .previous, .next {
+    background-color: white;
+    color: rgb(100,100,100);
+    border-radius: 50%;
+  }
+  
