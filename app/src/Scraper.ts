@@ -1,4 +1,4 @@
-import ldap from "ldapjs";
+import * as ldap from "ldapjs";
 import { DatabaseHelper } from "./Database";
 
 export class Scraper {
@@ -16,7 +16,7 @@ export class Scraper {
     public ScrapeTerms() {
         let opts = {
             filter: "(&(term=1600)(facultyCode=EN)(objectClass=uOfACourse))",
-            scope: "sub"
+            scope: "sub",
         };
 
         this.ldapClient.search("ou=calendar,dc=ualberta,dc=ca", opts, (err, res) => {

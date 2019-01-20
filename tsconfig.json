@@ -1,19 +1,14 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
-        "target": "es3",
+        "target": "es2015",
         "module": "commonjs",
         "outDir": "./build/",
         "sourceRoot": "./src/",
         "inlineSourceMap": true,
         "moduleResolution": "node",
-        "lib": [
-            "es5",
-            "scripthost",
-            "dom",
-            "dom.iterable"
-        ]
-    },
+        "esModuleInterop": true
+        },
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
