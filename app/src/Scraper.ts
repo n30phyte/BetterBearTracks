@@ -6,28 +6,33 @@ export class Scraper {
     private ldapClient: ldap.Client;
 
     constructor() {
-        this.ldapClient = ldap.createClient({ url: "directory.srv.ualberta.ca" });
+        this.db = new DatabaseHelper()
+        this.ldapClient = ldap.createClient({ url: "ldap://directory.srv.ualberta.ca" });
+        this.db.bootstrap();
     }
 
     public Start() {
-        this.ldapClient.bind("", "", this.ScrapeTerms);
+        this.ScrapeTerms();
     }
 
     public ScrapeTerms() {
-        let opts = {
-            filter: "(&(term=1600)(facultyCode=EN)(objectClass=uOfACourse))",
-            scope: "sub",
-        };
-
-        this.ldapClient.search("ou=calendar,dc=ualberta,dc=ca", opts, (err, res) => {
+        const opts: object = {
+            filter: "objectClass=uOfATerm",
+            scope: "one",
+            sizeLimit: 0,
+        }
+        this.ldapClient.search("ou=calendar, dc=ualberta, dc=ca", opts, (err, res) => {
             res.on("searchEntry", (entry) => {
-                console.log("Entry", JSON.stringify(entry.object));
+                let sql = "INSERT INTO Bob VALUES (" + entry.object.term + ", " + entry.object.termTitle + ", " +
+                entry.object.startDate + ", " + entry.object.endDate + ")";
+                this.db.insert(sql);
+                // console.log(JSON.stringify(entry.object));
             });
             res.on("searchReference", (referral) => {
-                console.log("Referral", referral);
+                // console.log("Referral", referral);
             });
             res.on("error", (err) => {
-                console.log("Error is", err);
+                // console.log("Error is", err);
             });
             res.on("end", (result) => {
                 console.log("Result is", result);
@@ -36,5 +41,5 @@ export class Scraper {
     }
 }
 
-let object = new Scraper();
-object.ScrapeTerms();
+let scraper = new Scraper();
+scraper.Start();

@@ -5,17 +5,16 @@ export class DatabaseHelper {
     private database: sqlite.Database;
 
     constructor() {
-        this.database = new sqlite.Database("./beartracks.db");
+        this.database = new sqlite.Database("../Beartracks.db");
     }
 
     public bootstrap(): void {
-        this.database.serialize(function () {
-            let createDatabase = fs.readFileSync("./createDatabase.sql").toString();
-            let processBearTracks = fs.readFileSync("./processBeartracks.sql").toString();
+        let sql: string = fs.readFileSync("../createDatabase.sql").toString();
+        this.database.run(sql);
+    }
 
-            this.database.run(createDatabase);
-            this.database.run(processBearTracks);
-        });
+    public insert(sql: string): void {
+        this.database.run(sql);
     }
 
     public printDatabase(tableName: string): void {
@@ -25,7 +24,7 @@ export class DatabaseHelper {
                 throw err;
             }
             rows.forEach((row) => {
-                console.log(row.name);
+                console.log(row);
             });
         });
     }

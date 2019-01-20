@@ -1,11 +1,15 @@
-CREATE TABLE Term(
+-- DROP TABLE IF EXISTS Term;
+-- DROP TABLE IF EXISTS Course;
+-- DROP TABLE IF EXISTS CourseClass; 
+
+CREATE TABLE IF NOT EXISTS Bob(
     termID int,
     termTitle text,
-    startDate text
-    endDate text,
-)
+    startDate text,
+    endDate text
+);
 
-CREATE TABLE Course(
+CREATE TABLE IF NOT EXISTS Course(
     courseSubject text,
     courseCatalog int,
     courseTitle text,
@@ -19,9 +23,9 @@ CREATE TABLE Course(
     facultyCode text,
     subjectTitle text,
     units float
-)
+);
 
-CREATE TABLE CourseClass(
+CREATE TABLE IF NOT EXISTS CourseClass(
     component text,
     section text,
     classLocation text,
@@ -50,4 +54,4 @@ CREATE TABLE CourseClass(
     instructorID text,
     courseSession text,
     units float   
-)
+);
