@@ -2,8 +2,8 @@
 -- DROP TABLE IF EXISTS Course;
 -- DROP TABLE IF EXISTS CourseClass; 
 
-CREATE TABLE IF NOT EXISTS Bob(
-    termID int,
+CREATE TABLE IF NOT EXISTS Term(
+    termID int UNIQUE,
     termTitle text,
     startDate text,
     endDate text
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Bob(
 CREATE TABLE IF NOT EXISTS Course(
     courseSubject text,
     courseCatalog int,
-    courseTitle text,
+    courseTitle text UNIQUE,
     asString text,
     course int,
     term int,

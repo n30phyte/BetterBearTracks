@@ -11,10 +11,12 @@ var DatabaseHelper = /** @class */ (function () {
         this.database.run(sql);
     };
     DatabaseHelper.prototype.insert = function (sql) {
-        this.database.run(sql);
+        this.database.run(sql, function (err) {
+            throw err;
+        });
     };
     DatabaseHelper.prototype.printDatabase = function (tableName) {
-        var sql = "SELECT * FROM " + tableName;
+        var sql = "SELECT * FROM " + tableName + " ORDER BY termID";
         this.database.all(sql, [], function (err, rows) {
             if (err) {
                 throw err;
