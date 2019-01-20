@@ -1,5 +1,7 @@
 import * as $ from "jquery";
 
+import Vue from "vue";
+
 $(() => {
     const electron = require("electron");
     console.log("loaded");
