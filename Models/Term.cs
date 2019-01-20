@@ -2,11 +2,10 @@ using System;
 
 namespace BetterBearTracks.Models
 {
-    public class Term
-    {
-        public uint ID { get; set; }
-        public string Title { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+    public class Term {
+        public uint id { get; set; }
+        public string title { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
     }
 }
