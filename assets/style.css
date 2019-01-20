@@ -39,7 +39,7 @@ The content `<div>` is where all your content goes.
 .content {
     margin: 0 auto;
     padding: 0 2em;
-    max-width: 800px;
+    max-width: 100%;
     margin-bottom: 50px;
     line-height: 1.6em;
 }
@@ -135,9 +135,11 @@ appears on the left side of the page.
     background: #1f8dd6;
 }
 
-#menu .pure-u-1-6{
-    background-color: rgb(255, 116, 70);
+.table_header {
+    /* align-content: center; */
+    background-color: rgba(255, 255, 255, .1);
     border-radius: 20px;
+    margin: 2px;   
 }
 
 /*
@@ -357,7 +359,7 @@ h1 {
 }
 
 pure-g {
-    color: orange;
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -392,13 +394,8 @@ a:hover {
     border-radius: 50%;
 }
 
-.table_header {
-    align-content: center;
-    background-color: rgba(255, 255, 255, .1);
-    border-radius: 20px;
-    margin: 2px;   
-}
 
-.main{
+
+.conten{
     width: 80ch;
 }
