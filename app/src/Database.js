@@ -4,13 +4,14 @@ var fs = require("fs");
 var sqlite = require("sqlite3");
 var DatabaseHelper = /** @class */ (function () {
     function DatabaseHelper() {
-        this.database = new sqlite.Database("../beartracks.db");
+        this.database = new sqlite.Database("../Beartracks.db");
     }
     DatabaseHelper.prototype.bootstrap = function () {
-        var createDatabase = fs.readFileSync("../createDatabase.sql").toString();
-        var processBearTracks = fs.readFileSync("../processBeartracks.sql").toString();
-        this.database.run(createDatabase);
-        this.database.run(processBearTracks);
+        var sql = fs.readFileSync("../createDatabase.sql").toString();
+        this.database.run(sql);
+    };
+    DatabaseHelper.prototype.insert = function (sql) {
+        this.database.run(sql);
     };
     DatabaseHelper.prototype.printDatabase = function (tableName) {
         var sql = "SELECT * FROM " + tableName;
@@ -19,7 +20,7 @@ var DatabaseHelper = /** @class */ (function () {
                 throw err;
             }
             rows.forEach(function (row) {
-                console.log("termID:", row.termID, "termTitle:", row.termTitle);
+                console.log(row);
             });
         });
     };
