@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BetterBearTracks.Models;
+using System.DirectoryServices;
 
 namespace BetterBearTracks.Controllers
 {
@@ -12,7 +13,11 @@ namespace BetterBearTracks.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+			Scraper target = new Scraper();
+			target.ScrapeTerms();
+			target.ScrapeCourses();
+
+			return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
