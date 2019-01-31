@@ -6,11 +6,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BetterBearTracks</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+
 </head>
 <body>
-@RenderBody()
-<script src="~/js/site.js" asp-append-version="true"></script>
-
+<div class="container-fluid">
+    <div class="row">
+        @RenderSection("Search")
+        @RenderSection("TimeTable")
+        @RenderBody()
+    </div>
+</div>
+<script src="~/js/site.js"></script>
 </body>
 </html>

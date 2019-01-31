@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ElectronNET.API;
+using ElectronNET.API.Entities;
 
 namespace BetterBearTracksv2
 {
@@ -46,11 +47,8 @@ namespace BetterBearTracksv2
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
@@ -60,8 +58,24 @@ namespace BetterBearTracksv2
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+            ElectronBootstrap();
 
         }
+        
+        private async void ElectronBootstrap()
+        {
+            var browserWindow = await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
+            {
+                Width = 1152,
+                Height = 864,
+                Show = false,
+                
+            });
+            
+            browserWindow.Show();
+            browserWindow.Reload();
+            Console.WriteLine("Loaded");
+        }
+
     }
 }
